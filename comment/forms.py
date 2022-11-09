@@ -7,6 +7,13 @@ class AddCommentForm(forms.ModelForm):
         fields=('name','body')
 
         widgets = {
-            'name': forms.TextInput(attrs={'class':'form-control', 'value':'', 'id':'userNameField'}),
-            'body': forms.Textarea(attrs={'class':'form-control'}),
+            'name': forms.TextInput(attrs={
+                'class':'form-control', 
+                'value':'', 
+                'id':'userNameField'
+                }),
+            'body': forms.Textarea(attrs={
+                'class':'form-control',
+                'placeholder':'Write your comment here.'
+                }),
         }

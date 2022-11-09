@@ -35,6 +35,7 @@ class CourseModelTest(TestCase):
         name_label = comment._meta.get_field('body').verbose_name
         self.assertEqual(name_label, 'body')
 
+
     #Tests for field characterisitcs
     def test_comment_name_max_length(self):
         comment = Comment.objects.get(name="Test Comment Name")

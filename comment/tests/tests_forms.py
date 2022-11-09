@@ -6,11 +6,18 @@ from comment.forms import AddCommentForm
 from django.urls import reverse
 
 class CommentFormTest(TestCase):
-    def test_is_valid(self):
+    def form_is_valid(self):
         form=AddCommentForm(data={"name": "Test Comment Name", "body": "Test Comment Body"})
         self.assertTrue(form.is_valid())
     
     def name_is_invalid(self):
+        form=AddCommentForm(data={"name": "", "body": "Test Comment Body"})
+        self.assertFalse(form.is_valid())
+
+    def name_is_too_long(self):
+        tooLongName=""
+        for x in range(256):
+            toolongName+=str(x)
         form=AddCommentForm(data={"name": "", "body": "Test Comment Body"})
         self.assertFalse(form.is_valid())
 

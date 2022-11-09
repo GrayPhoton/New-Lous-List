@@ -24,10 +24,18 @@ class TestSignIn(TestCase):
         user = authenticate(username='test', password='testpass')
         self.assertTrue((user is not None) and user.is_authenticated)
 
+    def test_no_username(self):
+        user = authenticate(username='', password='testpass')
+        self.assertFalse((user is not None) and user.is_authenticated)
+    
+    def test_no_password(self):
+        user = authenticate(username='test', password='')
+        self.assertFalse((user is not None) and user.is_authenticated)
+
     def test_wrong_username(self):
         user = authenticate(username='wrong', password='testpass')
-        self.assertFalse(user is not None and user.is_authenticated)
+        self.assertFalse((user is not None) and user.is_authenticated)
 
-    def test_wrong_pssword(self):
+    def test_wrong_password(self):
         user = authenticate(username='test', password='wrong')
-        self.assertFalse(user is not None and user.is_authenticated)
+        self.assertFalse((user is not None) and user.is_authenticated)

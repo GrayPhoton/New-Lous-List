@@ -95,13 +95,13 @@ if not 'test' in sys.argv:
 
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
 
-        'NAME': 'd6sq7o31jjoauf',
+        'NAME': 'dfpfd1ac8o7fha',
 
-        'USER': 'jpqjgwwzriajoy',
+        'USER': 'npzulyhvowhbqf',
 
-        'PASSWORD': '8ee63a8ee83defd07fd28dbcf26abd77e3b5b2165f631a221e37f7795978cb3e',
+        'PASSWORD': 'b4d8a2d64a76d68b59ab5e883405f76f4222f35821c561120110700d4e47a974',
 
-        'HOST': 'ec2-44-207-253-50.compute-1.amazonaws.com',
+        'HOST': 'ec2-34-235-198-25.compute-1.amazonaws.com',
 
         'PORT': '5432',
 
